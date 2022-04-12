@@ -43,13 +43,13 @@ web中的过滤器：当访问服务器的资源时，过滤器可以将请求�
 
 Spring Security只有一个真正的过滤器FilterChainProxy
 
-![image-20220411000529807](C:\Users\HP\Desktop\assert\image-20220411000529807.png)
+![image-20220411000529807](https://raw.githubusercontent.com/grinch2113/SpringSecurity/906539abf5b8953d1c3706a641925d06046fffaa/assert/image-20220411000529807.png)
 
 
 
 过滤器内部有过滤器链
 
-![image-20220411000739576](C:\Users\HP\Desktop\assert\image-20220411000739576.png)
+![image-20220411000739576](https://github.com/grinch2113/SpringSecurity/blob/master/assert/image-20220411000739576.png?raw=true)
 
 
 
@@ -122,7 +122,7 @@ formlogin，authorizeRequests，logout方法会生成一个Configurer，在这�
 
 用户认证后认证信息被存储在SecurityContextHolder中
 
-![image-20220411124021512](C:\Users\HP\Desktop\assert\image-20220411124021512.png)
+![image-20220411124021512](https://github.com/grinch2113/SpringSecurity/blob/master/assert/image-20220411124021512.png?raw=true)
 
 整个Spring Security只有一个SecurityContextHolder
 
@@ -146,13 +146,13 @@ Authentication：一个接口，代表认证信息，里面有3个属性
 
 默认实现：ProviderManager
 
-![image-20220411131251322](C:\Users\HP\Desktop\assert\image-20220411131251322.png)
+![image-20220411131251322](https://github.com/grinch2113/SpringSecurity/blob/master/assert/image-20220411131251322.png?raw=true)
 
 在一些场景下，会有多个ProdiverManager
 
 * 有多条SecurityFilterChain，它们认证信息(Authentication)一样，但是认证过程不一样
 
-![image-20220411132114381](C:\Users\HP\Desktop\assert\image-20220411132114381.png)
+![image-20220411132114381](https://github.com/grinch2113/SpringSecurity/blob/master/assert/image-20220411132114381.png?raw=true)
 
 
 
@@ -174,7 +174,7 @@ Authentication：一个接口，代表认证信息，里面有3个属性
 
 工作流程如下
 
-![image-20220411135253091](C:\Users\HP\Desktop\assert\image-20220411135253091.png)
+![image-20220411135253091](https://github.com/grinch2113/SpringSecurity/blob/master/assert/image-20220411135253091.png?raw=true)
 
 1. Spring Security的过滤器读取到用户名和密码，生成UsernamePasswordAuthenticationToken对象传给ProviderManager
 2. ProviderManager使用DaoAuthenticationProvider来进行认证
@@ -188,7 +188,7 @@ Authentication：一个接口，代表认证信息，里面有3个属性
 
 用来发送一个要求用户凭证的HTTP响应，通常是重定向到登录界面
 
-![image-20220411144018384](C:\Users\HP\Desktop\assert\image-20220411144018384.png)
+![image-20220411144018384](https://github.com/grinch2113/SpringSecurity/blob/master/assert/image-20220411144018384.png?raw=true)
 
 
 
@@ -204,7 +204,7 @@ Authentication：一个接口，代表认证信息，里面有3个属性
 
 ### Form认证流程
 
-![image-20220411143935130](C:\Users\HP\Desktop\assert\image-20220411143935130.png)
+![image-20220411143935130](https://github.com/grinch2113/SpringSecurity/blob/master/assert/image-20220411143935130.png?raw=true)
 
 1. UsernamePasswordAuthenticationFilter读取到用户名和密码，生成UsernamePasswordAuthenticationToken对象传给AuthenticationManager
 2. AuthenticationManager使用DaoAuthenticationProvider来进行认证
